@@ -1,0 +1,11 @@
+.cp-main-header{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: aliceblue;
+    background-color: var(--orange-primary);
+    font-weight: bold;
+}

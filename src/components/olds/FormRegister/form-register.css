@@ -1,0 +1,61 @@
+.box-form-register {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 70px;
+}
+
+.box-form-register .form-register{
+    width: 100%;
+}
+
+.box-form-register .form-title{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.box-form-register .form-register .form-group{
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.box-form-register .form-register input,
+.box-form-register .form-register textarea,
+.box-form-register .form-register select{
+    width: 100%;
+    height: 40px;
+    border: transparent;
+    border-radius: 0px 3px 3px 0;
+    border-left: 3px solid var(--yellow-primary); 
+    padding: 0 20px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.box-form-register .form-register input:focus{
+    border: 1px solid var(--yellow-primary); 
+    border-left: 3px solid var(--yellow-primary); 
+}
+
+.box-form-register .form-register textarea{
+    padding: 10px;
+    height: 100px;
+    min-height: 100px;
+    overflow-y: none;
+}
+
+.box-form-register .form-register .btn-send{
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    background-color: var(--yellow-primary);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.box-form-register .form-register .btn-send:hover{
+    background-color: var(--yellow-primary-hover);
+}
+

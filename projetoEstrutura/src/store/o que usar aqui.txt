@@ -1,0 +1,8 @@
+configurações do redux. ou qualquer outra biblioteca para gerenciamento de store. ou arquitetura flirks
+
+
+
+onde ficam os dados da aplicação.
+
+
+bibliotecas de arquitetura flircks. (ver o que é).

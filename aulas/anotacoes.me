@@ -1,0 +1,33 @@
+- como passar props para components
+- como criar uma lista no render usando map, é obrigatorio usar um atributo key no elemento que será feito o map pra que o map funcione.
+- state = para controlar os estados da aplicação.
+- criar um componente usando function
+- criar um componente usando class e export
+- databind de objetos no componente
+- atualizar states
+- componentDidMounted para realizar algo ao carregar o componente.
+- requisição usando AXIOS
+- rotas usando o react-router-dom
+- como importar um css 
+- como importar imagens
+- como importar e usar o componente na page
+- padrões css que ajudam na hora de debugar o código:
+    --> Componentes e páginas terão nome da pasta em camel case RegisterForm/Register 
+    --> os arquivos dos componentes e páginas terão o nome da pasta exemplo: Register porém com letras minúsculas e separadas as palavras com traço.
+    --> usar o padrão BEM para nomeclatura de classes e id 
+    --> usar um prefixo pg para páginas e cp para componentes
+    --> depois do prefixo usar o nome da classe do componente
+    --> classes para páginas ficam assim: pg-home pg-home__title pg-home__description pg-home__menu
+    --> classes para componentes ficam assim: cp-home cp-home__title cp-home__description cp-home__menu
+- funções criadas por desenvolvedores na aplicação devem ser escritas usando typescript para ter acesso aos states e variaveis.
+- importar o react nos componentes import React, { Components } from 'react'; para ter acesso a todos os componentes do react;
+- funções javascript como onclick e outras são escritas desta forma onClick={this.namefunction}
+- funções podem ser passadas por props: soma (a, b) => { a + b } [ myFunction={soma} / myFunction={(a, b) => a + b } / myFunction={this.soma} ]
+- variaveis, objetos e arrays são passados para o componente em forma de atributos: [  state = { nome: "aline", carros: ["fusca", "gol", "fiat"], 
+casa: {cor: "azul", cidade: "São Paulo"}}  <Component nome={this.state.nome} carros={this.state.carro} casa={this.state.casa}/> ]
+- as variáveis do state podem ser acessadas dentro do render com uma melhora de escrita assim: [ const { nome, carros, casa } = this.state; ] / 
+[ <Component nome={nome} carros={carro} casa={casa}/> ] 
+
+
+
+**** documentation ***

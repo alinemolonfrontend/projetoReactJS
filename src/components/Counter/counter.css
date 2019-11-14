@@ -1,0 +1,16 @@
+.cpn-counter__box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.cpn-counter__text{
+    padding: 20px 0;
+}
+
+.cpn-counter__btn{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,65 @@
+.cp-form-register {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 70px;
+}
+
+.cp-form-register__title{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.cp-form-register__form{
+    width: 100%;
+}
+
+.cp-form-register__form-group{
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.cp-form-register__form input,
+.cp-form-register__form textarea,
+.cp-form-register__form select{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 40px;
+    border: transparent;
+    border-radius: 0px 3px 3px 0;
+    border-left: 3px solid var(--yellow-primary); 
+    padding: 0 20px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.cp-form-register__form input:focus{
+    border: 1px solid var(--yellow-primary); 
+    border-left: 3px solid var(--yellow-primary); 
+}
+
+.cp-form-register__form textarea{
+    padding: 20px;
+    height: 100px;
+    min-height: 100px;
+    overflow-y: none;
+}
+
+.cp-form-register__btn-send{
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    background-color: var(--yellow-primary);
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 60px; 
+    cursor: pointer;
+}
+.cp-form-register__btn-send:hover{
+    background-color: var(--yellow-primary-hover);
+}
+

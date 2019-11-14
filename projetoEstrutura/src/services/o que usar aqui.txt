@@ -1,0 +1,3 @@
+todo serviço que faz alguma comunicação com algum outro ponto final.
+
+Apis de comunicação por exemplo
