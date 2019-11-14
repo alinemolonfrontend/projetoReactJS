@@ -1,5 +1,8 @@
 import React, { Component} from "react";
+import { Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+
+import Card from 'react-bootstrap/Card';
 import "./products-list.css";
 
 export default class ListProducts extends Component {
@@ -12,18 +15,24 @@ export default class ListProducts extends Component {
         const { products } = this.props;
 
         return (
-            <div className="cp-products-list">
+            <>
                 {
                     products.map(product => (
-                        <article className="cp-products-list__box" key={product._id}>
-                            <h2 className="cp-products-list__title"><strong>{product.title}</strong></h2>
-                            <p className="cp-products-list__description">{product.description}</p>
-
-                            <Link className="cp-products-list__link" to={`/products/${product._id}`}>Acessar</Link>
-                        </article>
+                        <Col md={4} key={product._id}>
+                            <Card className="cp-card">
+                                <Card.Body>
+                                    <Card.Title>{product.title}</Card.Title>
+                                    <Card.Text>{product.description}</Card.Text>
+                                    <Link className="cp-products-list__link" to={`/products/${product._id}`}>
+                                        Acessar
+                                    </Link>
+                                </Card.Body>
+                            </Card>
+                        </Col>
                     ))
                 }
-            </div>
+            </>
+           
         )
     }
 }

@@ -29,12 +29,13 @@ export default class Product extends Component {
         const { product } = this.state;
 
         return (
-            <div  className="pg-product">
+
+            <div className="pg-product">
                 <div className="pg-product__info">
                     <h1 className="pg-product__title">{product.title}</h1>
                     <p className="pg-product__text">{product.description}</p>
                     <div className="pg-product__box-link">
-                        <p className="pg-product__text-link">URL: 
+                        <p className="pg-product__text-link">URL:
                             <a className="pg-product__link" href={product.url}>{product.url}</a>
                         </p>
                     </div>

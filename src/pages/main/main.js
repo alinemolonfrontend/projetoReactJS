@@ -1,10 +1,15 @@
 import React, { Component } from "react";
 import api from "../../services/api";
-import { Link } from 'react-router-dom';
+import { Row, Container } from 'react-bootstrap';
 
 import ListProducts from '../../components/ProductList/products-list';
 import Counter from '../../components/Counter/counter';
 import ImageSlider from '../../components/ImageSlider/image-slider';
+
+
+import { Link } from 'react-router-dom';
+
+
 
 import "./main.css"
 
@@ -57,16 +62,24 @@ export default class Main extends Component {
 
         return (
             <div className="pg-main">
-                {slideVisible ? <ImageSlider/> : null }
-                <div className="container">
-                    <Link className="pg-main__btn-signup" to={"/register/"}>Criar conta</Link>
-                    <ListProducts products={products} />
-                    <div className="pg-main__actions">
-                        <button className="pg-main__btn" disabled={page === 1} onClick={this.prevPage}>Anterior</button>
-                        <button className="pg-main__btn" disabled={page === productInfo.pages} onClick={this.nextPage}>Próximo</button>
-                    </div>
-                    <Counter initialCount={1000}/>
-                </div>
+                {slideVisible ? <ImageSlider/> : <p>Galeria não deve ser exibida</p> }
+                <Container>
+                    <Row>
+                        <Link className="pg-main__btn-signup" to={"/register/"}>Criar conta</Link>
+                    </Row>
+                    <Row>
+                        <ListProducts products={products} />
+                    </Row >
+                    <Row>
+                        <div className="pg-main__actions">
+                            <button className="pg-main__btn" disabled={page === 1} onClick={this.prevPage}>Anterior</button>
+                            <button className="pg-main__btn" disabled={page === productInfo.pages} onClick={this.nextPage}>Próximo</button>
+                        </div>
+                    </Row>
+                    <Row>
+                        <Counter initialCount={1000}/>
+                    </Row>
+                </Container>
             </div>
            
         )

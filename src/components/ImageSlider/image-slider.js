@@ -47,12 +47,10 @@ export default class ImageSlider extends Component {
 
     render() {
         const { sliders, index } = this.state;
-        const { slideVisible } = this.props;
-        console.log('slideVisible', slideVisible);
 
         return (
 
-            <div className={'cp-image-slider ' + slideVisible}>
+            <div className="cp-image-slider">
                 <div className="cp-image-slider__box-btns">
                     <button className="cp-image-slider__btn-prev" onClick={this.handlePrev}>Prev</button>
                     <button className="cp-image-slider__btn-next" onClick={this.handleNext}>Next</button>
