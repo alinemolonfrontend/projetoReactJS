@@ -4,75 +4,68 @@ import "./form-register.css";
 class FormRegister extends Component {
 
     state = {
-        firstName: "",
-        lastName: "",
+        name: "",
+        surname: "",
         old: "",
         email: "",
-        message: ""
+        password: "",
+        message: "",
+        itemSelect: ""
     }
 
-    handleChangeName = (event) => {
-        console.log('firstName', event.target.value);
-        this.setState({ firstName: event.target.value });
+    // function de handleChange generica para atualizar state dos campos. 
+    // O nome da variavel do state deve ser o mesmo usado no name e passado por params na function de change do input
+    handleChange = event => {
+        this.setState({ [event.target.name]: event.target.value });
     }
 
-    handleChangeLastname = (event) => {
-        console.log('lastName', event.target.value);
-        this.setState({ lastName: event.target.value });
+    handleSelect = event => {
+        this.setState({ itemSelect: event.target.value });
     }
 
-    handleChangeOld = (event) => {
-        console.log('old', event.target.value);
-        this.setState({ old: event.target.value });
-    }
-
-    handleChangeEmail = (event) => {
-        console.log('email', event.target.value);
-        this.setState({ email: event.target.value });
-    }
-
-    handleChangeMessage = (event) => {
-        console.log('message', event.target.value);
-        this.setState({ message: event.target.value });
+    handleSubmit = event => {
+        event.preventDefault();
+        console.log('dados: ', this.state);
+        this.setState({ itemSelect: event.target.value });
     }
 
     render() {
-        const { firstName, lastName, old, email, message } = this.state;
+        const { name, surname, old, email, password, message, itemSelect } = this.state;
 
         return (
-            <div className="cp-form-register" onClick={alert('click')}>
+            <div className="cp-form-register">
                 <div className="cp-form-register__box">
                     <h2 className="cp-form-register__title">Preecha as informações abaixo</h2>
-                    <form className="cp-form-register__form">
+                    <form className="cp-form-register__form" onSubmit={this.handleSubmit}>
                         <div className="cp-form-register__form-group">
                             <input
                                 type="text"
                                 name="name"
-                                placeholder="Insira seu primeiro nome"
-                                value={firstName}
-                                onChange={this.handleChangeName}
+                                placeholder="name"
+                                value={name}
+                                onChange={this.handleChange}
                             />
                         </div>
-                        <small className="message-success">{firstName}</small>
+                        <small className="message-success">{name}</small>
 
                         <div className="cp-form-register__form-group">
                             <input
                                 type="text"
-                                name="lastname"
-                                placeholder="Insira seu sobrenome"
-                                value={lastName}
-                                onChange={this.handleChangeLastname}
+                                name="surname"
+                                placeholder="surname"
+                                value={surname}
+                                onChange={this.handleChange}
                             />
                         </div>
-                        <small className="message-success">{lastName}</small>
+                        <small className="message-success">{surname}</small>
 
                         <div className="cp-form-register__form-group">
                             <input
-                                type="text"
-                                name="idade"
-                                placeholder="Informe sua idade"
+                                type="number"
+                                name="old"
+                                placeholder="old"
                                 value={old}
-                                onChange={this.handleChangeOld}
+                                onChange={this.handleChange}
                             />
                         </div>
                         <small className="message-success">{old}</small>
@@ -81,20 +74,53 @@ class FormRegister extends Component {
                             <input
                                 type="text"
                                 name="email"
-                                placeholder="Informe seu email"
+                                placeholder="Email"
                                 value={email}
-                                onChange={this.handleChangeEmail}
+                                onChange={this.handleChange}
                             />
                         </div>
-                        <small className="message-success">{old}</small>
+                        <small className="message-success">{email}</small>
 
                         <div className="cp-form-register__form-group">
-                            <textarea onChange={this.handleChangeMessage} value={message} placeholder="Digite sua mensagem" >{message}</textarea>
+                            <input
+                                type="password"
+                                name="password"
+                                placeholder="password"
+                                value={password}
+                                onChange={this.handleChange}
+                            />
+                        </div>
+                        <small className="message-success">{password}</small>
+
+                        <div className="cp-form-register__form-group">
+                            <select 
+                                name="itemSelect"
+                                value={itemSelect} 
+                                onChange={this.handleSelect}>
+                                <option>nenhum</option>
+                                <option>Texto 02</option>
+                                <option>Texto 03</option>
+                                <option>Texto 04</option>
+                            </select>        
+                        </div>
+                        <small className="message-success">{itemSelect}</small>
+
+                        <div className="cp-form-register__form-group">
+                            <textarea 
+                                name="message"
+                                placeholder="message" 
+                                value={message} 
+                                onChange={this.handleChange} 
+                            >
+                                {message}
+                            </textarea>
                         </div>
                         <small className="message-success">{message}</small>
 
                         <div className="cp-form-register__form-group">
-                            <input className="cp-form-register__btn-send" type="submit" value="Enviar" />
+                            <button className="cp-form-register__btn-send" type="submit" onClick={this.handleSubmit}>
+                                Enviar
+                            </button>
                         </div>
                     </form>
                 </div>

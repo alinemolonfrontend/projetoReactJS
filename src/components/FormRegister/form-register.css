@@ -23,16 +23,25 @@
 
 .cp-form-register__form input,
 .cp-form-register__form textarea,
-.cp-form-register__form select{
+.cp-form-register__form select {
     font-family: Arial, Helvetica, sans-serif;
     width: 100%;
     height: 40px;
+    color: var(--black-secundary);
+    font-weight: lighter;
     border: transparent;
     border-radius: 0px 3px 3px 0;
     border-left: 3px solid var(--yellow-primary); 
     padding: 0 20px;
     outline: none;
     box-sizing: border-box;
+}
+
+.cp-form-register__form input::placeholder,
+.cp-form-register__form textarea::placeholder,
+.cp-form-register__form select::placeholder{
+    color: var(--gray-primary);
+    font-size: 12px;
 }
 
 .cp-form-register__form input:focus{

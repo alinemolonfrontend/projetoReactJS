@@ -28,7 +28,6 @@ export default class Counter extends Component {
         console.log('render carregado'); 
 
         return (
-            
             <div className="cpn-counter">
                 <div className="cpn-counter__box">
                     <button className="cpn-counter__btn" onClick={this.handeDecrement}>decrement</button>

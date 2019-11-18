@@ -1,5 +1,5 @@
-import React, { Component} from "react";
-import { Col } from 'react-bootstrap';
+import React, { Component } from "react";
+import { Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 import Card from 'react-bootstrap/Card';
@@ -15,24 +15,28 @@ export default class ListProducts extends Component {
         const { products } = this.props;
 
         return (
-            <>
-                {
-                    products.map(product => (
-                        <Col md={4} key={product._id}>
-                            <Card className="cp-card">
-                                <Card.Body>
-                                    <Card.Title>{product.title}</Card.Title>
-                                    <Card.Text>{product.description}</Card.Text>
-                                    <Link className="cp-products-list__link" to={`/products/${product._id}`}>
-                                        Acessar
-                                    </Link>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                    ))
-                }
-            </>
-           
+            <div className="cp-products-list">
+                <Row>
+                    {
+                        products.map(product => (
+                            <Col md={4} key={product._id}>
+                                <div className="cp-products-list__card">
+                                    <div className="cp-products-list__card-box">
+                                        <div className="cp-products-list__card-content">
+                                            <div className="cp-products-list__card-title">{product.title}</div>
+                                            <div className="cp-products-list__card-description">{product.description}</div>
+                                        </div>
+                                        <Link className="cp-products-list__card-link" to={`/products/${product._id}`}>
+                                            Acessar
+                                        </Link>
+                                    </div>
+                                </div>
+                            </Col>
+                        ))
+                    }
+                </Row >
+            </div>
+
         )
     }
 }

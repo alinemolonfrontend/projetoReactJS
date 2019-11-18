@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import api from "../../services/api";
-import { Row, Container } from 'react-bootstrap';
+import { Row, Col, Container } from 'react-bootstrap';
 
 import ListProducts from '../../components/ProductList/products-list';
 import Counter from '../../components/Counter/counter';
@@ -67,21 +67,22 @@ export default class Main extends Component {
                     <Row>
                         <Link className="pg-main__btn-signup" to={"/register/"}>Criar conta</Link>
                     </Row>
+                    <ListProducts products={products} />
                     <Row>
-                        <ListProducts products={products} />
-                    </Row >
-                    <Row>
-                        <div className="pg-main__actions">
-                            <button className="pg-main__btn" disabled={page === 1} onClick={this.prevPage}>Anterior</button>
-                            <button className="pg-main__btn" disabled={page === productInfo.pages} onClick={this.nextPage}>Próximo</button>
-                        </div>
+                        <Col>
+                            <div className="pg-main__actions">
+                                <button className="pg-main__btn" disabled={page === 1} onClick={this.prevPage}>Anterior</button>
+                                <button className="pg-main__btn" disabled={page === productInfo.pages} onClick={this.nextPage}>Próximo</button>
+                            </div>
+                        </Col>
                     </Row>
                     <Row>
-                        <Counter initialCount={1000}/>
+                        <Col>
+                            <Counter initialCount={1000}/>
+                        </Col>
                     </Row>
                 </Container>
             </div>
-           
         )
     }
 }
