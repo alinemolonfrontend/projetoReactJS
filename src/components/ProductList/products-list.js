@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-import Card from 'react-bootstrap/Card';
 import "./products-list.css";
 
 export default class ListProducts extends Component {

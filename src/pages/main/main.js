@@ -4,8 +4,8 @@ import { Row, Col, Container } from 'react-bootstrap';
 
 import ListProducts from '../../components/ProductList/products-list';
 import Counter from '../../components/Counter/counter';
+import User from '../../components/User/user';
 import ImageSlider from '../../components/ImageSlider/image-slider';
-
 
 import { Link } from 'react-router-dom';
 
@@ -64,6 +64,9 @@ export default class Main extends Component {
             <div className="pg-main">
                 {slideVisible ? <ImageSlider/> : <p>Galeria não deve ser exibida</p> }
                 <Container>
+                    <Row>
+                        <User />
+                    </Row>
                     <Row>
                         <Link className="pg-main__btn-signup" to={"/register/"}>Criar conta</Link>
                     </Row>
