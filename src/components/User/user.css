@@ -1,0 +1,41 @@
+.cp-card__list{
+    margin-top: 60px;
+    width: 100%;
+}
+
+.cp-card{
+    background-color: #222;
+    padding: 30px;
+    border-radius: 2px;
+    margin: 5px;
+    color: var(--white-primary);
+    height: 314px;
+    max-height: 314px;
+}
+
+.cp-card__content{
+    padding: 20px;
+}
+
+.cp-card__title{
+    font-weight: bold;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.cp-card__name{
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+.cp-card__box-image{
+    
+}
+
+.cp-card__image{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--yellow-primary);
+}

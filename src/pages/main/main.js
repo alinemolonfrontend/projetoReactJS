@@ -64,9 +64,7 @@ export default class Main extends Component {
             <div className="pg-main">
                 {slideVisible ? <ImageSlider/> : <p>Galeria não deve ser exibida</p> }
                 <Container>
-                    <Row>
-                        <User />
-                    </Row>
+                    <User />
                     <Row>
                         <Link className="pg-main__btn-signup" to={"/register/"}>Criar conta</Link>
                     </Row>
