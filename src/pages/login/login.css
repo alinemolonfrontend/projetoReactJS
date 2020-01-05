@@ -1,0 +1,41 @@
+.formLogin{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20vw;
+}
+
+.groupLogin{
+    padding: 20px;
+}
+
+.inputLogin{
+    border: none;
+    border: 1px solid #9A9629;
+    border-radius: 30px;
+    height: 40px;
+    width: 100%;
+    outline: none;
+    padding: 20px;
+}
+
+.btnLogin{
+    border: none;
+    background-color: #FBB426;
+    border-radius: 30px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    transition: .3s;
+    text-transform: uppercase;
+    outline: none;
+}
+.btnLogin:hover{
+    background-color: #faa907;
+    transition: .3s;
+}
+.btnLogin:focus {
+    outline: 0;
+}
+        
